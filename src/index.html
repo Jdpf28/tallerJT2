@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            background-color: #0288D1;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="data:image/png;base64,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" alt="TV Series Logo">
+        <h1>TV Series</h1>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Seasons</th>
+                </tr>
+            </thead>
+            <tbody id="series">
+                <!-- Aquí se generarán las filas con JavaScript -->
+            </tbody>
+        </table>
+        <p id="averageSeasons"></p>
+    </div>
+
+    <div class="col-md-4" id="series-detail" style="display: none;">
+      <div class="card">
+          <img id="series-image" class="card-img-top" alt="Series Image">
+          <div class="card-body">
+              <h5 id="series-title" class="card-title"></h5>
+              <p id="series-description" class="card-text"></p>
+              <a id="series-link" href="#" class="btn btn-primary" target="_blank">Ver más</a>
+          </div>
+      </div>
+    </div>
+
+    <tbody id="series">
+      <!-- Here the rows will be generated with JavaScript -->
+    </tbody>
+
+    <script type="module">
+        import { data } from './data.js'; // Importando el archivo data.ts convertido a JS
+
+        function renderSeriesTable(series) {
+            const seriesTbody = document.getElementById('series');
+            let seriesHtml = '';
+            series.forEach(function (s) {
+                seriesHtml += `
+                    <tr>
+                        <td>${s.id}</td>
+                        <td><a href="${s.link}" target="_blank">${s.name}</a></td>
+                        <td>${s.channel}</td>
+                        <td>${s.seasons}</td>
+                    </tr>
+                `;
+            });
+            seriesTbody.innerHTML = seriesHtml;
+            const averageSeasons = calculateAverageSeasons(series);
+            const averageSeasonsText = document.getElementById('averageSeasons');
+            averageSeasonsText.innerHTML = `Promedio de temporadas: ${averageSeasons.toFixed(2)}`;
+        }
+
+        function calculateAverageSeasons(series) {
+            const totalSeasons = series.reduce((sum, serie) => sum + serie.seasons, 0);
+            return totalSeasons / series.length;
+        }
+
+        renderSeriesTable(data);
+    </script>
+
+</body>
+</html>
